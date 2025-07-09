@@ -1,0 +1,70 @@
+repository_type: pipeline
+
+nf_core_version: 3.3.2
+
+lint:
+  files_unchanged:
+    - .prettierignore
+    - .prettierignore
+    - .prettierignore
+    - .github/CONTRIBUTING.md
+    - .prettierignore
+    - LICENSE
+    - CODE_OF_CONDUCT.md
+    - assets/nf-core-repaq2fastq_logo_light.png
+    - docs/images/nf-core-repaq2fastq_logo_light.png
+    - docs/images/nf-core-repaq2fastq_logo_dark.png
+    - .github/ISSUE_TEMPLATE/bug_report.yml
+    - .github/CONTRIBUTING.md
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - assets/email_template.txt
+    - docs/README.md
+  nextflow_config:
+    - manifest.name
+    - manifest.homePage
+    - validation.help.beforeText
+    - validation.help.afterText
+    - validation.summary.beforeText
+    - validation.summary.afterText
+  multiqc_config:
+    - report_comment
+  files_exist:
+    - assets/email_template.html
+    - assets/sendmail_template.txt
+    - assets/email_template.txt
+    - conf/igenomes.config
+    - conf/igenomes_ignored.config
+    - LICENSE
+    - CODE_OF_CONDUCT.md
+    - assets/nf-core-repaq2fastq_logo_light.png
+    - docs/images/nf-core-repaq2fastq_logo_light.png
+    - docs/images/nf-core-repaq2fastq_logo_dark.png
+    - .github/ISSUE_TEMPLATE/config.yml
+    - .github/workflows/awstest.yml
+    - .github/workflows/awsfulltest.yml
+  readme:
+    - nextflow_badge
+    - nfcore_template_badge
+
+template:
+  org: originsciences
+  name: repaq2fastq
+  description: A pipeline that decompresses repaq files to fastq.gz files
+  author: Michael Beavitt
+  version: 1.0.0dev
+  force: true
+  outdir: .
+  skip_features:
+    - github_badges
+    - license
+    - igenomes
+    - fastqc
+    - gpu
+    - gitpod
+    - codespaces
+    - vscode
+    - rocrate
+    - email
+    - adaptivecard
+    - slackreport
+  is_nfcore: false
